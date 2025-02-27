@@ -50,7 +50,7 @@ mm.add("(min-width:1280px)", () => {
         )
         .to(".center-content",
             {
-                scale: 1,
+                scale: 0,
                 opacity: 0,
                 display: "none",
             },
