@@ -3,14 +3,14 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#section",
         start: "top top",
-        end: "bottom top",
-        scrub: true,
+        end: "400%",
+        scrub: 3,
         pin: true
     }
 });
 const tl2 = gsap.timeline({
     scrollTrigger: {
-        scrub: 2,
+        scrub: 3,
         pin: false
     }
 });
@@ -24,26 +24,22 @@ mm.add("(min-width:1280px)", () => {
         {
             y: 0,
             opacity: 1,
-            duration: 5
         }
     )
     tl.fromTo("#left-arrow",
         { x: "-130%" },
         {
-            x: "-20%",
-            duration: 5,
+            x: "-20%",,
             ease: "none"
         })
         .to(".bottom-arrow",
             {
                 bottom: "40%",
-                duration: 5
             })
         .to(".center-content",
             {
                 scale: 1,
                 opacity: 1,
-                duration: 5
             },
         )
         .to("#left-arrow",
@@ -57,26 +53,22 @@ mm.add("(min-width:1280px)", () => {
                 scale: 1,
                 opacity: 0,
                 display: "none",
-                duration: 4
             },
         )
         .to(".bottom-arrow",
             {
                 bottom: "50%",
-                duration: 5
             })
         .to(".center-content-two",
             {
                 scale: 1,
                 opacity: 1,
                 display: "block",
-                duration: 4
             },
         )
         .to("#left-arrow",
             {
                 x: "5%",
-                duration: 1
             },
         )
         .to(".center-content-two",
@@ -84,13 +76,11 @@ mm.add("(min-width:1280px)", () => {
                 scale: 0,
                 opacity: 0,
                 display: "none",
-                duration: 4
             },
         )
         .to(".bottom-arrow",
             {
                 bottom: "60%",
-                duration: 5
             })
         .to(".center-content-three",
             {
@@ -98,7 +88,6 @@ mm.add("(min-width:1280px)", () => {
                 x: "15%",
                 opacity: 1,
                 display: "block",
-                duration: 4
             },
         );
 });
@@ -112,7 +101,6 @@ mm.add("(max-width:1279.98px)", () => {
         {
             y: 0,
             opacity: 1,
-            duration: 5
         }
     )
     tl2.fromTo(".center-content",
@@ -129,7 +117,6 @@ mm.add("(max-width:1279.98px)", () => {
             {
                 x: "0",
                 opacity: 1,
-                duration: 4
             },
         )
         .to(".center-content-two",
@@ -137,7 +124,6 @@ mm.add("(max-width:1279.98px)", () => {
                 x: "0",
                 opacity: 1,
                 display: "block",
-                duration: 4
             },
         )
         .to(".center-content-three",
@@ -145,7 +131,6 @@ mm.add("(max-width:1279.98px)", () => {
                 x: "0",
                 opacity: 1,
                 display: "block",
-                duration: 4
             },
         );
 });
