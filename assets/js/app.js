@@ -29,7 +29,7 @@ mm.add("(min-width:1280px)", () => {
     tl.fromTo("#left-arrow",
         { x: "-130%" },
         {
-            x: "-20%",,
+            x: "-20%",
             ease: "none"
         })
         .to(".bottom-arrow",
