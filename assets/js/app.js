@@ -48,7 +48,6 @@ mm.add("(min-width:1280px)", () => {
         .to("#left-arrow",
             {
                 x: "-10%",
-                duration: 1
             },
         )
         .to(".center-content",
@@ -108,11 +107,11 @@ mm.add("(max-width:1279.98px)", () => {
     )
     tl2.fromTo(".center-content",
         {
-            x: "-100%",
+            x: "-102%",
             opacity: 0,
         },
         {
-            x: "-100%",
+            x: "-102%",
             opacity: 1,
         },
     )
