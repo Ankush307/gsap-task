@@ -37,23 +37,25 @@
         class="min-h-screen bg-[#EDFAFB] relative overflow-hidden flex flex-col items-center justify-center">
         <div class="container mx-auto relative z-10 max-xl:px-10 max-sm:px-3">
             <div class="relative max-w-[1097px] mx-auto max-xl:max-h-[500px] ">
-                <img class="max-w-[1097px] w-full h-full mx-auto max-xl:max-h-[500px] max-sm:h-[450px]"
+                <img class="w-[1098px] max-[1601.98px]:w-[700px] max-[1601.98px]:h-[400px] mx-auto pointer-events-none"
                     src="assets/images/png/intro-frame.png" alt="">
                 <div
                     class="flex items-center absolute max-xl:max-h-[450px]  justify-center mx-auto top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                     <div class="layer-one">
-                        <img class="pointer-events-none h-full w-full" src="./assets/images/png/intro-layer-one.png"
-                            alt="layer">
+                        <img class="w-[678px] max-[1601.98px]:w-[400px] pointer-events-none max-md:w-[300px]"
+                            src="./assets/images/png/intro-layer-one.png" alt="layer">
                     </div>
-                    <div class="hidden opacity-0 layer-two max-xl:h-[390px] max-lg:h-[300px] max-sm:w-[300px]">
+                    <div
+                        class="hidden opacity-0 layer-two w-[476px] max-[1601.98px]:w-[200px] h-[500px] max-[1601.98px]:h-[250px]">
                         <img class="layer-two pointer-events-none h-full w-full"
                             src="./assets/images/png/intro-layer-two.png" alt="layer">
                     </div>
-                    <div class="hidden opacity-0 layer-three max-xl:h-[390px] max-lg:h-[300px] max-sm:w-[300px]">
-                        <img class=" pointer-events-none h-full w-full" src="./assets/images/png/intro-layer-three.png"
-                            alt="layer">
+                    <div class="hidden opacity-0 layer-three max-xl:h-[390px] max-[1601.98px]:w-[300px] h-[474px] max-[1601.98px]:h-[250px] max-sm:h-[300px]">
+                        <img class=" pointer-events-none"
+                            src="./assets/images/png/intro-layer-three.png" alt="layer">
                     </div>
-                    <div class="hidden opacity-0 layer-four max-xl:h-[390px] max-lg:h-[300px] max-sm:w-[300px]">
+                    <div
+                        class="hidden opacity-0 layer-four w-[533px] max-[1601.98px]:w-[300px] h-[474px] max-[1601.98px]:h-[250px]">
                         <img class=" pointer-events-none h-full w-full" src="./assets/images/png/intro-layer-four.png"
                             alt="layer">
                     </div>
@@ -64,7 +66,8 @@
                         <img class=" pointer-events-none h-full w-full" src="./assets/images/png/intro-layer-five.png"
                             alt="layer">
                     </div>
-                    <div class="hidden opacity-0 layer-six max-xl:h-[390px] max-lg:h-[300px] max-sm:w-[300px]">
+                    <div
+                        class="hidden opacity-0 layer-six w-[747px] max-[1601.98px]:w-[500px] h-[480px] max-[1601.98px]:h-[300px] max-md:w-[270px] max-md:h-[280px]">
                         <img class=" pointer-events-none h-full w-full" src="./assets/images/png/intro-layer-six.png"
                             alt="layer">
                     </div>
@@ -107,11 +110,11 @@
             </div>
         </div>
         <div
-            class="flex max-xl:flex-col items-center side-arrow justify-end gap-10 xl:gap-3 text-[#7EE49C] absolute bottom-[25%] max-lg:hidden xl:bottom-[30%] right-0 ">
+            class="flex max-xl:flex-col items-center side-arrow justify-end gap-10 xl:gap-3 text-[#7EE49C] absolute bottom-[25%] max-xl:hidden xl:bottom-[30%] right-0 ">
             <p class="flex flex-nowrap max-xl:rotate-90 whitespace-nowrap">come lo facciamo</p>
             <img class="xl:-rotate-45 rotate-45" src="assets/images/svg/text-top-arrow.svg" alt="">
         </div>
-        <img class="absolute bottom-0 max-sm:scale-[3]" src="./assets/images/png/intro-bottom-arrow.png"
+        <img class="absolute bottom-layer bottom-0 max-sm:scale-[3]" src="./assets/images/png/intro-bottom-arrow.png"
             alt="bottom-arrow">
     </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -142,6 +145,11 @@
                     display: "block",
                     opacity: 1,
                 })
+            // .to("bottom-layer",
+            //  {
+            //     bottom: "10%",
+            //     scale: 5
+            // })
             .to(".side-arrow",
                 {
                     bottom: "40%"

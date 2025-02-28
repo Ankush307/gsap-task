@@ -10,7 +10,10 @@ const tl = gsap.timeline({
 });
 const tl2 = gsap.timeline({
     scrollTrigger: {
-        scrub: 3,
+        trigger: "#section",
+        start: "top top",
+        end: "400%",
+        scrub: 1,
         pin: false
     }
 });
@@ -19,7 +22,7 @@ mm.add("(min-width:1280px)", () => {
     tl.fromTo(".heading",
         {
             opacity: 0,
-            y: "-100%"
+            y: "100%"
         },
         {
             y: 0,
@@ -96,7 +99,7 @@ mm.add("(max-width:1279.98px)", () => {
     tl2.fromTo(".heading",
         {
             opacity: 0,
-            y: "-100%"
+            y: "100%"
         },
         {
             y: 0,
