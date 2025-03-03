@@ -32,9 +32,9 @@
 </head>
 
 <body>
-    <section class="min-h-screen bg-black"></section>
+    <section class="min-h-screen flex items-center justify-center bg-black text-white text-5xl font-bold max-sm:text-2xl">Scroll Down</section>
     <section id="effi"
-        class="min-h-screen flex font-raleway lg:items-center bg-[url('./assets/images/png/effi-bg-blue.png')] bg-no-repeat bg-cover bg-center">
+        class="min-h-screen flex items-center justify-center font-raleway flex-col lg:items-center bg-[url('./assets/images/png/effi-bg-blue.png')] bg-no-repeat bg-cover bg-center">
         <div class="container max-w-[1005px] mx-auto text-white max-xl:px-5">
             <div class="top-heading">
                 <h2 class="lg:text-[46px] text-2xl font-bold lg:leading-[55.2px] text-center max-lg:pt-4">Core
@@ -47,12 +47,13 @@
                     protocol
                     token $EEFI. Check them out!'</p>
             </div>
-            <div class="flex-wrap lg:gap-[77px] sm:pt-8 pt-4 flex max-lg:flex-col max-lg:items-center">
+            <div class="xl:gap-[77px] lg:gap-[50px] sm:pt-8 pt-4 flex max-[1023.98px]:flex-col max-lg:items-center">
                 <div class="max-w-[449px] w-full flex items-center justify-center">
                     <div
                         class="lg:pt-[17px] lg:px-[19px] lg:pb-[31px] px-4 py-3 bg-cover bg-center bg-no-repeat bg-[url('./assets/images/png/bg-blur.png')] max-w-[335px] w-full rounded-xl transition-all duration-300 hover:shadow-[_0px_4px_41px_0px_#4281EE70] backdrop-blur-[25px]">
                         <div class="w-full card-one">
-                            <button class="sm:py-3 sm:px-[11px] p-2 text-sm leading-[22.44px] rounded-lg bg-[#2B45A8]"><span
+                            <button
+                                class="sm:py-3 sm:px-[11px] p-2 text-sm leading-[22.44px] rounded-lg bg-[#2B45A8]"><span
                                     class="card-one-content">Innovation</span> <span
                                     class="card-two-content hidden opacity-0">Planned</span>
                                 <span class="card-three-content hidden opacity-0">Innovation</span></button>
@@ -99,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:max-w-[449px] sm:w-[550px] w-full lg:pt-[99px] pt-5">
+                <div class="lg:max-w-[449px] max-lg:max-w-[550px] max-lg:w-[550px] max-sm:w-full lg:pt-[99px] pt-5">
                     <!-- 1 to 6 cards data -->
                     <div class="card-side-panel-first">
                         <p
@@ -151,8 +152,7 @@
                                 <span class="font-bold">daily</span>
                                 using this “Interest”
                                 earned on deposits. This causes the ‘leverage effect’
-                                and is reflected in $EEFI’s value. When AMPL supply is
-                                stable or contracting, $EEFI is minted
+                                and is reflected in $EEFI’s value.
                             </p>
                             <p class="text-white/80 max-lg:text-sm hidden opacity-0 text-number-6">
                                 $AMPLs pioneering rebase states [Positive | Negative
@@ -235,18 +235,9 @@
             scrollTrigger: {
                 trigger: "#effi",
                 start: "top top",
-                end: "400%",
+                end: "600%",
                 scrub: 3,
                 pin: true
-            }
-        });
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#effi",
-                start: "top top",
-                end: "400%",
-                scrub: 1,
-                pin: false
             }
         });
         tl.fromTo(".top-heading",
@@ -307,51 +298,27 @@
                     opacity: 1,
                     display: "block"
                 })
-            .to(".card-content-first", {
+            .to([".card-content-first", ".card-side-panel-first"], {
                 display: "none",
                 opacity: 0
             })
-            .to(".card-one-content", {
+            .to([".card-one-content", ".card-side-panel-one"], {
                 display: "block",
                 opacity: 1
             })
-            .to(".card-side-panel-first", {
+            .to([".card-one-content", ".card-side-panel-one"], {
                 display: "none",
                 opacity: 0
             })
-            .to(".card-side-panel-one", {
+            .to([".card-two-content", ".card-side-panel-two"], {
                 display: "block",
                 opacity: 1
             })
-            .to(".card-one-content", {
+            .to([".card-two-content", ".card-side-panel-two"], {
                 display: "none",
                 opacity: 0
             })
-            .to(".card-two-content", {
-                display: "block",
-                opacity: 1
-            })
-            .to(".card-side-panel-one", {
-                display: "none",
-                opacity: 0
-            })
-            .to(".card-side-panel-two", {
-                display: "block",
-                opacity: 1
-            })
-            .to(".card-two-content", {
-                display: "none",
-                opacity: 0
-            })
-            .to(".card-three-content", {
-                display: "block",
-                opacity: 1
-            })
-            .to(".card-side-panel-two", {
-                display: "none",
-                opacity: 0
-            })
-            .to(".card-side-panel-three", {
+            .to([".card-three-content", ".card-side-panel-three"], {
                 display: "block",
                 opacity: 1
             })
